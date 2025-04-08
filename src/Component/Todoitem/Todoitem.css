@@ -1,0 +1,115 @@
+.todoitem{
+    /* margin-top: 10px; */
+    display: flex;
+    justify-content: space-between;
+    /* padding-inline: 16px 0px; */
+    align-items: center;
+    /* background-color: #ADADAD; */
+    background-color: #f0eeed;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    
+   
+  
+   
+}
+
+ .todoitems-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    
+}
+
+.todoitems-text{
+    width: 65%;
+    padding-left: 16px;
+    color: #3f3c3c;
+    font-size: 18px;
+
+}
+
+.todoitems{
+    width: 70%;
+    padding-left: 16px;
+    color: #bdbaba;
+    font-size: 18px;
+
+}
+
+.circle{
+    font-size: 30px;
+    cursor: pointer;
+    /* padding-right: 25px; */
+    color: #6082B6;
+}
+
+.drag-handle{
+    font-size: 30px;
+    cursor: pointer;
+    /* padding-right: 25px; */
+    color: #6082B6;
+    margin-bottom: 10px;
+    padding-left: -20px;
+
+}
+
+.tododate{
+    margin-right: -520px;
+
+}
+
+
+.btns{
+    display: flex;
+    text-align: center;
+
+}
+
+.todoitems-delete{
+    
+    font-size: 40px;
+    margin-left: 10px;
+    cursor: pointer;
+    /* padding-right: 25px; */
+    color: red;
+
+}
+
+
+.todoitems-edit{
+    
+    font-size: 40px;
+    /* margin-left: 10px; */
+    cursor: pointer;
+    /* padding-right: 25px; */
+    color: rgb(145, 145, 117);
+
+}
+
+.line-through{
+    text-decoration: line-through solid black;
+} 
+
+
+
+input.editinput{
+    background-color: greenyellow;
+    width: 90%;
+    padding-left: 16px;
+    color: #404040;
+    font-size: 18px;
+    border: none;
+    outline: 0;
+    background-color: transparent;
+
+
+}
+
+
+.tododate{
+    width: 20%;
+}
+
+
