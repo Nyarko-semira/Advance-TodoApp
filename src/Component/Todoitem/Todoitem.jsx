@@ -11,6 +11,7 @@ import { RxDragHandleDots2 } from "react-icons/rx";
 import { CSS } from "@dnd-kit/utilities";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import { toast} from 'react-toastify';
 
 
 
@@ -38,7 +39,7 @@ const Todoitem = ({ handleEditEvent, no, display,text, deleteTodo, toggle, todo,
 
     const handleDelete = () =>{
       if (display === "line-through") {
-        alert("You can't delete a completed task!");
+        toast.error("You can't delete a completed task!");
         return;
       }
       handleShow();

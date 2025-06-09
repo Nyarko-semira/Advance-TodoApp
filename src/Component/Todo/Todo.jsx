@@ -4,6 +4,7 @@ import './Todo.css'
 import Todoitem from '../Todoitem/Todoitem';
 import { DndContext, closestCenter } from "@dnd-kit/core";
 import { SortableContext, verticalListSortingStrategy, horizontalListSortingStrategy, rectSortingStrategy, arrayMove } from "@dnd-kit/sortable";
+import { toast} from 'react-toastify';
 
 
 
@@ -38,7 +39,7 @@ const Todo = () => {
     const inputValue = todo.text.trim();
 
     if (inputValue.length < 4) {
-      alert("text should be more than 4 letters!");
+      toast.error("text should be more than 4 letters!");
       return;
     }
 
@@ -46,20 +47,20 @@ const Todo = () => {
     console.log(inputDate);
 
     if (!inputDate) {
-      alert("Please set a date for the task!");
+      toast.error("Please set a date for the task!");
       return;
     }
 
     const selectPriority = document.getElementById("priority").value;
 
     if (!selectPriority) {
-      alert("Please set a priority for the task!");
+      toast.error("Please set a priority for the task!");
       return;
     }
 
     const Duplicate = todos.some(t => t.text.toLowerCase() === inputValue.toLowerCase());
     if (Duplicate) {
-      alert("This task already exists!");
+      toast.error("This task already exists!");
       return;
     }
 
@@ -109,7 +110,7 @@ const Todo = () => {
   const handleEditEvent = (no) => {
     const selectedtodo = todos?.find(x => x?.no === no);
     if (selectedtodo.display === "line-through") {
-      alert("You cant edit completed Task!");
+      toast.error("You cant edit completed Task!");
       return;
     }
 
@@ -127,7 +128,7 @@ const Todo = () => {
   const deleteTodo = (no) => {
     const selectedtodo = todos?.find(x => x?.no === no);
     if (selectedtodo.display === "line-through") {
-      alert("You cant Delete a Completed Task");
+      toast.error("You cant Delete a Completed Task");
       return;
     }
     const data = todos.filter(todo => todo.no !== no);
