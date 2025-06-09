@@ -35,7 +35,7 @@ const Todoitem = ({ handleEditEvent, no, display,text, deleteTodo, toggle, todo,
 
    const handleClose = () => setShow(false);
    const handleShow = () => setShow(true);
-
+f
 
     const handleDelete = () =>{
       if (display === "line-through") {
